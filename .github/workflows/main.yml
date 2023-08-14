@@ -7,7 +7,7 @@ jobs:
     steps:
     - name: Get repo
       uses: actions/checkout@main
-    - name: Annotate Steps
+    - name: Annotate Step
       id: annotate
       uses: WillBailie/dusk-results-action@main
       with:

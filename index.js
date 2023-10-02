@@ -17,12 +17,12 @@ async function run() {
     
     const annotations = [];
 
-    core.summary.addHeading('Flaky Tests');
-
     if (jsonData) {
+      core.summary.addHeading('Flaky Tests');
       for (const item of jsonData) {
         core.summary.addDetails(item.title);
       }
+      core.summary.write();
     }
   } catch (error) {
     core.setFailed(error.message);

@@ -8,12 +8,12 @@ jobs:
       steps:
           - name: Get repo
             uses: actions/checkout@main
-          - name: Annotate Steps
-            id: annotate
-            uses: WillBailie/dusk-results-action@main
-            with:
-              report_path: ./test_output/dusk_output.json
-              github_token: ${{ secrets.GITHUB_TOKEN }}
+          # - name: Annotate Steps
+            # id: annotate
+            # uses: WillBailie/dusk-results-action@main
+            # with:
+              # report_path: ./test_output/dusk_output.json
+              # github_token: ${{ secrets.GITHUB_TOKEN }}
           - name: test summary
             if: 'always()'
             run: |

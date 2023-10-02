@@ -13,3 +13,7 @@ jobs:
       with:
         report_path: ./test_output/dusk_output.json
         github_token: ${{ secrets.GITHUB_TOKEN }}
+    - name: test summary
+      if: 'always()'
+      run: |
+        echo "this is a test summary" >> $GITHUB_STEP_SUMMARY

@@ -1,19 +1,15 @@
 on: [push]
 
 jobs:
-  hello_world_job:
-    runs-on: ubuntu-latest
-    name: Annotate flaky tests
-    steps:
-    - name: Get repo
-      uses: actions/checkout@main
-    - name: Annotate fails
-      id: annotate
-      uses: WillBailie/test-gh-action@main
-      with:
-        report_path: ./test_output/dusk_output.json
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-    - name: test summary
-      if: 'always()'
-      run: |
-        echo "this is a test summary" >> $GITHUB_STEP_SUMMARY
+    run:
+      runs-on: ubuntu-latest
+      name: Annotate flaky tests
+      steps:
+          - name: Get repo
+            uses: actions/checkout@main
+          - name: Annotate fails
+            id: annotate
+            uses: WillBailie/test-gh-action@main
+            with:
+              report_path: ./test_output/dusk_output.json
+              github_token: ${{ secrets.GITHUB_TOKEN }}            

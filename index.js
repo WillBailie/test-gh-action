@@ -20,7 +20,7 @@ async function run() {
     if (jsonData) {
       core.summary.addHeading('Flaky Tests');
       for (const item of jsonData) {
-        const details = item.message + '<br />' + item.file;
+        const details = item.message + '<br />' + item.file + '<br />' + item.trace;
         core.summary.addDetails(':yellow_circle:	' + item.title, details);
       }
       core.summary.write();

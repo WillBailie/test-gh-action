@@ -3,6 +3,13 @@
         "file": "\/var\/www\/modules\/Notifications\/Tests\/Browser\/EmailNotificationsTest.php",
         "title": "test_supported_email_templates_can_be_overridden_at_venue_level",
         "message": "Did not see expected text [gieruignefjg] within element [body].\nFailed asserting that false is true.",
-        "trace": "\/var\/www\/modules\/Notifications\/Tests\/Browser\/EmailNotificationsTest.php  (45) <br \/>\/var\/www\/modules\/Notifications\/Tests\/Browser\/EmailNotificationsTest.php  (41) <br \/>"
+        "trace": "\/var\/www\/modules\/Notifications\/Tests\/Browser\/EmailNotificationsTest.php  (45) <br \/>\/var\/www\/modules\/Notifications\/Tests\/Browser\/EmailNotificationsTest.php  (41) <br \/>",
+        "flaky": 1
+    },
+    {
+        "file": "\/var\/www\/modules\/Notifications\/Tests\/Browser\/EmailNotificationsTest.php",
+        "title": "test_non_supported_email_templates_cannot_be_overridden_at_venue_level",
+        "message": "Did not see expected text [tesfdsfsdf] within element [body].\nFailed asserting that false is true.",
+        "trace": "\/var\/www\/modules\/Notifications\/Tests\/Browser\/EmailNotificationsTest.php  (62) <br \/>\/var\/www\/modules\/Notifications\/Tests\/Browser\/EmailNotificationsTest.php  (58) <br \/>"
     }
 ]

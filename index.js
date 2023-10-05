@@ -18,7 +18,7 @@ async function run() {
     const annotations = [];
 
     if (jsonData) {
-      core.summary.addHeading('Flaky Tests');
+      core.summary.addHeading('Dusk Test Failures');
       for (const item of jsonData) {
         const details = item.message + '<br />' + item.file + '<br />' + item.trace;
         if(item.flaky) {
@@ -26,7 +26,7 @@ async function run() {
         } else {
           core.summary.addDetails(':red_circle:	' + item.title, details);
         }
-      }
+      } 
       core.summary.write();
     }
   } catch (error) {

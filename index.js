@@ -21,7 +21,11 @@ async function run() {
       core.summary.addHeading('Flaky Tests');
       for (const item of jsonData) {
         const details = item.message + '<br />' + item.file + '<br />' + item.trace;
-        core.summary.addDetails(':yellow_circle:	' + item.title, details);
+        if(item.flaky) {
+          core.summary.addDetails(':yellow_circle:	' + item.title, details);  
+        } else {
+          core.summary.addDetails(':red_circle:	' + item.title, details);
+        }
       }
       core.summary.write();
     }
